@@ -47,6 +47,7 @@ export default function ProductDetail({ product }: Props) {
             <button
               key={img}
               onClick={() => setActiveImage(img)}
+              aria-label={`View product image ${img}`}
               className={`border rounded-md overflow-hidden w-16 h-20 ${
                 activeImage === img ? "border-black" : "border-gray-200"
               }`}
@@ -66,10 +67,16 @@ export default function ProductDetail({ product }: Props) {
           />
 
           <div className="absolute top-4 right-4 flex flex-col gap-2">
-            <button className="p-2 bg-white rounded-full shadow">
+            <button
+              className="p-2 bg-white rounded-full shadow"
+              aria-label="share"
+            >
               <Share2 size={18} />
             </button>
-            <button className="p-2 bg-white rounded-full shadow">
+            <button
+              className="p-2 bg-white rounded-full shadow"
+              aria-label="like"
+            >
               <Heart size={18} />
             </button>
           </div>
@@ -121,6 +128,7 @@ export default function ProductDetail({ product }: Props) {
               <button
                 key={c.name}
                 onClick={() => setSelectedColor(c)}
+                aria-label={`Select color ${c.name}`}
                 style={{ backgroundColor: c.value }}
                 className={`w-9 h-9 rounded-md border ${
                   selectedColor.name === c.name
@@ -146,6 +154,7 @@ export default function ProductDetail({ product }: Props) {
               <button
                 key={size}
                 onClick={() => setSelectedSize(size)}
+                aria-label={`Select size ${size}`}
                 className={`px-4 py-2 rounded-md border ${
                   selectedSize === size
                     ? "border-black font-medium"
@@ -158,7 +167,7 @@ export default function ProductDetail({ product }: Props) {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* Checkout */}
         <div className="flex gap-4">
           <button className="flex-1 bg-black text-white py-4 rounded-md">
             Add To Cart
