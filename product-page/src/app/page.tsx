@@ -7,14 +7,7 @@ import { Product } from "./interfaces/product";
 import ProductDetailsTabs from "@/components/product/ProductDetailsTab";
 import ReviewsSection from "@/components/product/ReviewsSection";
 import RelatedProducts from "@/components/product/RelatedProducts";
-
-const images = [
-  "/product/main.jpg",
-  "/product/1.jpg",
-  "/product/2.jpg",
-  "/product/3.jpg",
-  "/product/4.jpg",
-];
+import ProductVariants from "@/components/product/ProductVariants";
 
 const colors = [
   { name: "Royal Brown", value: "#5A4632" },
