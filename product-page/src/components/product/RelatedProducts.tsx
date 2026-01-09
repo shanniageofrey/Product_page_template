@@ -63,7 +63,7 @@ export default function RelatedProducts() {
               href={`/product/${product.id}`}
               className="group block bg-white rounded-lg overflow-hidden hover:shadow-lg transition"
             >
-              <div className="aspect-[3/4] overflow-hidden bg-gray-100">
+              <div className="aspect-3/4 overflow-hidden bg-gray-100">
                 <Image
                   src={product.image}
                   alt={product.name}

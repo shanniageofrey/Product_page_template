@@ -39,8 +39,8 @@ export default function ProductVariants({
                     ? "border-gray-900"
                     : "border-gray-200 hover:border-gray-400"
                 }`}
-                style={{ backgroundColor: color.hex }}
-                aria-label={color.name}
+                style={{ backgroundColor: color.name }}
+                aria-label={`Select color ${color.name}`}
               />
             ))
           ) : (
@@ -114,5 +114,3 @@ export default function ProductVariants({
     </div>
   );
 }
-
-
